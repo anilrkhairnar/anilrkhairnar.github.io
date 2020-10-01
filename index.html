@@ -65,11 +65,11 @@
             <ul class="f-icons">
               <li><a href="http://www.youtube.com/channel/UC9yTqOKH1jPCBQunGhCydkg"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
               <li><a href="http://www.instagram.com/anilrkhairnar"><i class="fab fa-instagram" aria-hidden="true"></a></i></li>
-                <li><a href="http://twitter.com/anilrkhairnar"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="http://in.linkedin.com/in/anilrkhairnar"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+              <li><a href="http://twitter.com/anilrkhairnar"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="http://in.linkedin.com/in/anilrkhairnar"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
             </ul>
           </div>
-          <img src="images/profile.png" alt="profile">
+          <img class="profile" src="images/profile.png" alt="profile">
           <div class="h-r-text">
             <h6>-Introduction</h6>
             <h5>Web Designer & Developer based in Maharashtra</h5>
@@ -183,6 +183,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.min.js.map"></script>
 
+<!-- Scroll Reveal JS linked -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
 <!-- Vanilla titlt linked -->
 <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
 
@@ -199,6 +202,48 @@
   $('.nav-link').click(function(){
     $('.navbar-collapse').collapse('hide');
   });
+</script>
+
+<!----------- Scroll Reveal JS ------------->
+<script>
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: 'true'
+  })
+
+  // home section
+  sr.reveal('.h-l-text', {})
+  sr.reveal('.h-l-text i', { origin: 'right', opacity: 0, delay: 300 })
+  sr.reveal('.h-r-text', { delay: 600 })
+  sr.reveal('.profile', { origin: 'left', delay: 900, opacity: 0 })
+
+  // skills section
+  sr.reveal('.s-l-text', {})
+  sr.reveal('.s-bars', {delay: 300})
+
+  // hobbies section
+  sr.reveal('.h-card:nth-child(1)', { origin: 'bottom', delay: 600 })
+  sr.reveal('.h-card:nth-child(2)', { origin: 'bottom', delay: 800 })
+  sr.reveal('.h-card:nth-child(3)', { origin: 'bottom', delay: 1000 })
+ 
+  // language section
+  sr.reveal('.l-icons .row-1 i:nth-child(1)', { origin: 'bottom' })
+  sr.reveal('.l-icons .row-1 i:nth-child(2)', { origin: 'bottom', delay: 250 })
+  sr.reveal('.l-icons .row-1 i:nth-child(3)', { origin: 'bottom', delay: 500 })
+  sr.reveal('.l-icons .row-1 i:nth-child(4)', { origin: 'bottom', delay: 750 })
+  
+  sr.reveal('.l-icons .row-2 i:nth-child(1)', { origin: 'bottom', delay: 1000 })
+  sr.reveal('.l-icons .row-2 i:nth-child(2)', { origin: 'bottom', delay: 1250 })
+  sr.reveal('.l-icons .row-2 i:nth-child(3)', { origin: 'bottom', delay: 1450 })
+  sr.reveal('.l-icons .row-2 i:nth-child(4)', { origin: 'bottom', delay: 1700 })
+
+  // footer section
+  sr.reveal('footer li', { origin: 'bottom', delay: 1950 })
+  sr.reveal('footer h5', { origin: 'bottom', delay: 2100 })
+
+
 </script>
 
 </body>
